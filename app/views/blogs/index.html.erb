@@ -1,0 +1,12 @@
+<p><%=notice%></p>
+
+<h1>つぶやき一覧</h1>
+
+<% @blogs.each do |blog| %>
+  <p>本文:<%= blog.content %></p>
+   <%=link_to "つぶやきを編集する",edit_blog_path(blog.id),data:{confirm:'本当に編集していいですか？'}%>
+   <%=link_to 'つぶやきを削除する', blog_path(blog.id), method: :delete ,data:{confirm:'本当に削除していいですか？'}%>
+   
+<% end %>
+ 
+<%=link_to"TWEETを作成する",new_blog_path%>
