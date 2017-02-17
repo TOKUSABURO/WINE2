@@ -10,11 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+  
+      <div class="row">
+        <div class="col-sm-offset-4 col-xs-4">
+ 
   <%= f.label :content %>
-  <%= f.text_field :content %>
+  <%= f.text_field :content,class: 'form-control'%>
   <br>
-  <%= f.submit %>
+  <%= f.submit '投稿', class: 'btn btn-primary btn-block' %>
+  	</div>
+    </div>
+
 <% end %>
 
 <%= link_to "つぶやき一覧画面にもどる", blogs_path %>

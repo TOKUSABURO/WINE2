@@ -1,6 +1,6 @@
-<p><%=notice%></p>
-
 <h1>つぶやき一覧</h1>
+
+<p><%= notice %></p>
 
 <% @blogs.each do |blog| %>
   <p>本文:<%= blog.content %></p>

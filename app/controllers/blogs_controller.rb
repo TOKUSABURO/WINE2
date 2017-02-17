@@ -29,13 +29,13 @@ class BlogsController < ApplicationController
   def update
     @blog = Blog.find(params[:id])
     @blog.update(blogs_params)
-     redirect_to new_blog_path, notice: "ブログをアップデートしました！"
+     redirect_to blogs_path, notice: "つぶやきをアップデートしました！"
   end
   
   def destroy
     @blog = Blog.find(params[:id])
     @blog.destroy
-    redirect_to blogs_path
+    redirect_to blogs_path, notice: "つぶやきを削除しました！"
   end
   
   def confirm
