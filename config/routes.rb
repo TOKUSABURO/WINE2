@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
- 
+
+  devise_for :users
   get 'top/index'
 
  resources:blogs,only:[:index,:new,:create,:edit,:update,:update,:destroy]do
@@ -10,7 +11,9 @@ end
 
 root 'top#index'
 
- 
+resources :charges
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
