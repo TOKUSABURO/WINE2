@@ -41,6 +41,10 @@ group :development, :test do
   gem 'pry-rails'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  group :development do
+
+    gem 'dotenv-rails'
 end
 
 gem'twitter-bootstrap-rails'
@@ -50,3 +54,9 @@ gem 'rails_12factor', group: :production
 gem 'devise'
 
 gem 'stripe'
+
+gem 'pry-rails'
+
+gem 'better_errors'
+
+gem 'rails_admin
