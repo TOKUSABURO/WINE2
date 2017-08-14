@@ -11,9 +11,20 @@
   </thead>
 
   <tbody>
+
+　　<%= link_to '新規写真投稿', new_picture_path %>
+
+     <br>
+
     <% @pictures.each do |picture| %>
       <tr>
         <td><%= picture.date %></td>
+
+       <strong>どう？</strong>
+      <%= image_tag picture.image.url %>
+
+
+      </p>
         <td><%= link_to '確認', picture %></td>
         <td><%= link_to '編集', edit_picture_path(picture) %></td>
         <td><%= link_to '削除', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -21,7 +32,5 @@
     <% end %>
   </tbody>
 </table>
-
+</br>
 <br>
-
-<%= link_to '新規写真', new_picture_path %>
