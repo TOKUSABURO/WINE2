@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :date %><br>
+    <%= f.label :日時 %><br>
     <%= f.datetime_select :date %>
   </div>
 
@@ -24,9 +24,11 @@
     <%= image_tag @picture.image.url %>
   </div>
 <% end %><br>
-  <%= f.label :image %><br>
+  <%= f.label :イメージ %><br>
+  <Center>
   <%= f.file_field :image %>
   <%= f.hidden_field :image_cache %>
+</Center>
 </div>
 <div class="field">
   <!-- 既存レコード(DBに保存されている)かつ、画像が存在する場合 -->
