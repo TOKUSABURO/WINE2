@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pictures</h1>
+<h1>写真一覧</h1>
 
 <table>
   <thead>
@@ -14,9 +14,9 @@
     <% @pictures.each do |picture| %>
       <tr>
         <td><%= picture.date %></td>
-        <td><%= link_to 'Show', picture %></td>
-        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '確認', picture %></td>
+        <td><%= link_to '編集', edit_picture_path(picture) %></td>
+        <td><%= link_to '削除', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Picture', new_picture_path %>
+<%= link_to '新規写真', new_picture_path %>
