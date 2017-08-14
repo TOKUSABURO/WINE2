@@ -19,6 +19,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blogs_params)
     if @blog.save
       redirect_to blogs_path, notice: "つぶやきを作成しました！"
+      NoticeMailer.sendmail_blog(@blog).deliver
     else
       render 'new'
     end
@@ -47,7 +48,7 @@ class BlogsController < ApplicationController
 
   private
     def blogs_params
-      params.require(:blog).permit(:content)
+      params.require(:blog).permit(:content,:image_url, :image_url_cache)
     end
 
     def set_blog
