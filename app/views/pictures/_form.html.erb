@@ -22,12 +22,15 @@
   <% if @picture.image? %>
     <div class="thumbnail">
     <%= image_tag @picture.image.url %>
+
+
   </div>
 <% end %><br>
   <%= f.label :イメージ %><br>
   <Center>
   <%= f.file_field :image %>
   <%= f.hidden_field :image_cache %>
+
 </Center>
 </div>
 <div class="field">
